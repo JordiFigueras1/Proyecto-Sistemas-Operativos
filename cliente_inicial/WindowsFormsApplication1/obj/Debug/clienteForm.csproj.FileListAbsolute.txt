@@ -129,103 +129,116 @@ C:\share\16-03-2018 version2\cliente_inicial\WindowsFormsApplication1\obj\Debug\
 C:\share\16-03-2018 version2\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\share\16-03-2018 version2\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\share\16-03-2018 version2\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\share\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\share\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\share\Version 1\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\share\Version 1\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\share\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\share\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\share\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\share\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\share\Prototipo 1\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\share\Prototipo 1\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\share\Prototipo 1\Version 1\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\share\Prototipo 1\Version 1\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\share\Prototipo 1\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\share\Prototipo 1\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\share\Prototipo 1\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\share\Prototipo 1\Version 1\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\share\Prototipo 2\Version 2\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\share\Prototipo 2\Version 2\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\Dani\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\Dani\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\Dani\Desktop\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\Dani\Desktop\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\Dani\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\Users\Dani\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\Dani\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\Dani\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\share\Version 3\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\share\Version 3\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\share\Version 3\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\share\Version 3\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\share\Version 3\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\share\Version 3\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\share\Version 3\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\share\Version 3\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\share\Version 4\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\share\Version 4\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\share\Version 4\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\share\Version 4\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\share\Version 4\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\share\Version 4\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\share\Version 4\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\share\Version 4\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\share\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\share\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\share\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\share\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\share\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\share\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\share\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\share\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Mejorada\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final2\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final2\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final2\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final2\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final2\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final2\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final2\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\rober\OneDrive\Escritorio\SO\version 4\Version 4 Final2\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\Users\rober\OneDrive\Escritorio\SO\version chat Q2\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\rober\OneDrive\Escritorio\SO\version chat Q2\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\rober\OneDrive\Escritorio\SO\version chat Q2\version chat\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\rober\OneDrive\Escritorio\SO\version chat Q2\version chat\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\rober\OneDrive\Escritorio\SO\version chat Q2\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\Users\rober\OneDrive\Escritorio\SO\version chat Q2\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\rober\OneDrive\Escritorio\SO\version chat Q2\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\rober\OneDrive\Escritorio\SO\version chat Q2\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\Users\gabri\Desktop\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\gabri\Desktop\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\gabri\Desktop\version chat\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\gabri\Desktop\version chat\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\gabri\Desktop\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\Users\gabri\Desktop\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\gabri\Desktop\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\gabri\Desktop\version chat\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\Users\jfg56\Downloads\Version 5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\jfg56\Downloads\Version 5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\jfg56\Downloads\Version 5\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\jfg56\Downloads\Version 5\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\jfg56\Downloads\Version 5\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
-C:\Users\jfg56\Downloads\Version 5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\jfg56\Downloads\Version 5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\jfg56\Downloads\Version 5\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
-C:\Users\jfg56\OneDrive\Escritorio\Version 5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\jfg56\OneDrive\Escritorio\Version 5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Prototipo3\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\Prototipo3\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Prototipo3\ServidorCliente\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\Prototipo3\ServidorCliente\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\Prototipo3\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\share\Prototipo3\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\share\Prototipo3\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\Prototipo3\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\share\Prototipo4\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\Prototipo4\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Prototipo4\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\share\Prototipo4\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\share\Prototipo4\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\Prototipo4\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\share\Prototipo4\ServidorCliente\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\Prototipo4\ServidorCliente\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\SO\P5enproceso\ServidorCliente\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\SO\P5enproceso\ServidorCliente\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\SO\P5enproceso\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\SO\P5enproceso\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\SO\P5enproceso\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\SO\P5enproceso\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\SO\P5enproceso\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\SO\P5enproceso\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\SO\P5enproceso\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Prot5fin\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\Prot5fin\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Prot5fin\ServidorCliente\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\Prot5fin\ServidorCliente\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\Prot5fin\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\share\Prot5fin\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\share\Prot5fin\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\Prot5fin\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\enric\Desktop\SO DESCARGAS\V5 to final\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\enric\Desktop\SO DESCARGAS\V5 to final\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\enric\Desktop\SO DESCARGAS\V5 to final\ServidorCliente\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\enric\Desktop\SO DESCARGAS\V5 to final\ServidorCliente\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\enric\Desktop\SO DESCARGAS\V5 to final\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\enric\Desktop\SO DESCARGAS\V5 to final\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\enric\Desktop\SO DESCARGAS\V5 to final\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\enric\Desktop\SO DESCARGAS\V5 to final\ServidorCliente\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\Sergi\Desktop\cliente_inicial-v6\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Sergi\Desktop\cliente_inicial-v6\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\enric\Desktop\SO DESCARGAS\V6\6.1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\enric\Desktop\SO DESCARGAS\V6\6.1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\enric\Desktop\SO DESCARGAS\V6\6.1\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\enric\Desktop\SO DESCARGAS\V6\6.1\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\enric\Desktop\SO DESCARGAS\V6\6.1\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\enric\Desktop\SO DESCARGAS\V6\6.1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\enric\Desktop\SO DESCARGAS\V6\6.1\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\enric\Desktop\SO DESCARGAS\V6\6.1\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\share\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\share\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\share\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\Sergi\Desktop\6.5-20180616T210726Z-001\6.5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Sergi\Desktop\6.5-20180616T210726Z-001\6.5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\enric\Desktop\SO DESCARGAS\V7\6.5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\enric\Desktop\SO DESCARGAS\V7\6.5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\enric\Desktop\SO DESCARGAS\V7\6.5\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\enric\Desktop\SO DESCARGAS\V7\6.5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\enric\Desktop\SO DESCARGAS\V7\6.5\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\enric\Desktop\SO DESCARGAS\V7\6.5\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\enric\Desktop\SO DESCARGAS\V7\6.5\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\enric\Desktop\SO DESCARGAS\V7\6.5\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\enric\Desktop\SO DESCARGAS\v8\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\enric\Desktop\SO DESCARGAS\v8\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\enric\Desktop\SO DESCARGAS\v8\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\enric\Desktop\SO DESCARGAS\v8\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\enric\Desktop\SO DESCARGAS\v8\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\enric\Desktop\SO DESCARGAS\v8\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\enric\Desktop\SO DESCARGAS\v8\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\enric\Desktop\SO DESCARGAS\v8\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\Dani\Desktop\SO\Version final shiva2\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Dani\Desktop\SO\Version final shiva2\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\lmelu\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\lmelu\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\lmelu\Desktop\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\lmelu\Desktop\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\lmelu\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\lmelu\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\lmelu\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\lmelu\Desktop\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\gabri\Desktop\SO20\FINAL\SO Proyecto Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\gabri\Desktop\SO20\FINAL\SO Proyecto Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\gabri\Desktop\SO20\FINAL\SO Proyecto Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\gabri\Desktop\SO20\FINAL\SO Proyecto Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\gabri\Desktop\SO20\FINAL\SO Proyecto Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\gabri\Desktop\SO20\FINAL\SO Proyecto Final\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\gabri\Desktop\SO20\FINAL\SO Proyecto Final\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\gabri\Desktop\SO20\FINAL\SO Proyecto Final\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\jfg56\Downloads\Proyecto SO 2019-2020\Version FINAL\1a Entrevista\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\jfg56\Downloads\Proyecto SO 2019-2020\Version FINAL\1a Entrevista\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\jfg56\Downloads\Proyecto SO 2019-2020\Version FINAL\1a Entrevista\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\jfg56\Downloads\Proyecto SO 2019-2020\Version FINAL\1a Entrevista\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\jfg56\Downloads\Proyecto SO 2019-2020\Version FINAL\1a Entrevista\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\jfg56\Downloads\Proyecto SO 2019-2020\Version FINAL\1a Entrevista\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\jfg56\Downloads\Proyecto SO 2019-2020\Version FINAL\1a Entrevista\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\jfg56\Downloads\Proyecto SO 2019-2020\Version FINAL\1a Entrevista\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\jfg56\OneDrive\Escritorio\Proyecto SO\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\jfg56\OneDrive\Escritorio\Proyecto SO\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\jfg56\OneDrive\Escritorio\Proyecto SO\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\jfg56\OneDrive\Escritorio\Proyecto SO\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\jfg56\OneDrive\Escritorio\Proyecto SO\cliente_inicial\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\jfg56\OneDrive\Escritorio\Proyecto SO\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\jfg56\OneDrive\Escritorio\Proyecto SO\cliente_inicial\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\jfg56\OneDrive\Escritorio\Proyecto SO\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\pablo\Desktop\Proyecto Sistemas Operativos\Proyecto-Sistemas-Operativos\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\pablo\Desktop\Proyecto Sistemas Operativos\Proyecto-Sistemas-Operativos\cliente_inicial\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
