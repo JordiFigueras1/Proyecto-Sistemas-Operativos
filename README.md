@@ -1,4 +1,3 @@
-# Proyecto-Sistemas-Operativos
-Primera Versión
-Versión 4 generada por Jordi
-Versión 4 verificada por Pablo
+Proyecto-Sistemas-Operativos
+Version 5 generada por Pablo
+Version 5 verificada por Polet
