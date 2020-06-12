@@ -85,16 +85,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FondoPantalla.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gabri.jpg" />
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\live-messenger-blue_512x512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pablo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

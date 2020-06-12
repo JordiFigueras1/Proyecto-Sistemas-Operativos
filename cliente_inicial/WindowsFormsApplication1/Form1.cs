@@ -14,95 +14,310 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        Socket server;
         Thread atender;
-        delegate void DelegadoParaLimpiar();
-        delegate void DelegadoParaEscribir(string[] trozos);
-        String nombre_usuario;
-        int confirmacion = 5;
-        int usuariomensaje;
+        Socket server;
+        bool molestar = true;
+        string nombre_usuario;
+        int nombrepersonamensajeada;
+        string listajugadorespartida;
+        int dineroapostado;
+        string colorapostado;
+        bool jugadarealizada = false;
+        bool partidaempezada = false;
+        bool owner = false;
+        string[] trozos3 = new string[10];
+        string[] lista_de_jugadas = new string[10];
+        int numero_de_jugadores =0;
+        int idpartida;
+        int numero_de_jugadores_inicial;
+        bool ganador = false;
+        bool empezarpartida = false;
+        //textBox1.Visible = false;
+
+        delegate void DelegadoParaActualizarLista(string[] trozos);
+        bool conectado = false;
 
         public Form1()
         {
+            //Decidimos lo que queremos que se vea al iniciar el programa.
             InitializeComponent();
-            
+            pictureBox1.Visible = false;
+            dataGridView3.Visible = false;
+            button11.Visible = false;
+            label16.Visible = false;
+            textBox6.Text = "50081";
+            textbox_IP.Text = "147.83.117.22";
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
-        private void EscribirLista(string[] trozos)
+        //Atendemos los mensajes que recibimos del servidor para saber que message box hay que poner en cada uno de los casos.
+        private void atender_mensajes_servidor()
         {
-                int f = Convert.ToInt32(trozos[2]);
-                int i = 0;
-                if (dataGridView1.Rows.Count != 0)
-                    dataGridView1.Rows.Clear();
-                while (i < f)
+            while (true)
+            {
+                byte[] msg = new byte[80];
+
+                // recibo mensaje del servidor
+                if (conectado == false)
                 {
-                    dataGridView1.Rows.Add(trozos[i + 3]);
-                    i++;
+                    server.Shutdown(SocketShutdown.Both);
+                    server.Close();
+                    break;
                 }
+
+                else
+                {
+                    server.Receive(msg);
+
+                    string mensaje = Encoding.ASCII.GetString(msg);
+                    mensaje = mensaje.TrimEnd('\0');  //Limpia el mensaje del servidor
+                    string[] trozos = mensaje.Split('/');
+
+                    // Averiguo el tipo de mensaje
+                    if (trozos[0] == "0")   //Actualiza la lista de conectados
+                    {
+                        if (Convert.ToInt32(trozos[1]) > 0)
+                        {
+                            dataGridView1.Invoke(new DelegadoParaActualizarLista(Escribir_grid1), new object[] { trozos });
+                            dataGridView2.Invoke(new DelegadoParaActualizarLista(Escribir_grid2), new object[] { trozos });
+                        }
+                    }
+
+                    if (trozos[0] == "20")
+                    {
+                        MessageBox.Show("Se ha desregistrado correctamente");
+                    }
+                    if (trozos[0] == "-20")
+                    {
+                        MessageBox.Show("No se ha podido desregistrarse");
+                    }
+                    if (trozos[0] == "1")
+                    {
+                        MessageBox.Show("Registro ok");
+                    }
+                    if (trozos[0] == "-1")
+                    {
+                        MessageBox.Show("Registro fallido");
+                    }
+                    if (trozos[0] == "2")
+                    {
+                        MessageBox.Show("Login ok");
+
+                    }
+                    if (trozos[0] == "-2")
+                    {
+                        MessageBox.Show("Login fallido");
+                    }
+                    if (trozos[0] == "3")
+                    {
+                        MessageBox.Show("el jugador ha ganado:" + trozos[1] + "partidas");
+                    }
+                    if (trozos[0] == "-3")
+                    {
+                        MessageBox.Show("Peticion fallida");
+                    }
+                    if (trozos[0] == "4")
+                    {
+                        MessageBox.Show("han jugado:" + trozos[1] + " partidas");
+                    }
+                    if (trozos[0] == "-4")
+                    {
+                        MessageBox.Show("Peticion fallida");
+                    }
+                    if (trozos[0] == "5")
+                    {
+                        MessageBox.Show("hay:" + trozos[1] + "jugadores registrados");
+                    }
+                    if (trozos[0] == "-5")
+                    {
+                        MessageBox.Show("Peticion fallida");
+                    }
+                    if (trozos[0] == "6")
+                    {
+                        string confirmacion;
+                        if (empezarpartida == false)
+                        {
+                            DialogResult dialogresult = MessageBox.Show(trozos[1] + " quiere jugar contigo", "Invitación de partida", MessageBoxButtons.OKCancel);
+                            if (dialogresult == DialogResult.OK)
+                            {
+                                confirmacion = "0";
+                                empezarpartida = true;
+                            }
+                            else if (dialogresult == DialogResult.Cancel)
+                                confirmacion = "1";
+
+                            else
+                                confirmacion = "3";
+                        }
+
+                        else
+                        {
+                            confirmacion = "3";
+                        }
+
+                        string respuesta = "-6/" + confirmacion + "/" + trozos[1];
+                        byte[] code = System.Text.Encoding.ASCII.GetBytes(respuesta);
+                        server.Send(code);
+                    }
+                    if (trozos[0] == "-6")  //Respuesta de invitación
+                    {
+                        if (trozos[1] == "0")
+                        {
+                            MessageBox.Show("Invitación aceptada por " + trozos[2]);
+                            Escribir_lista(trozos[2]);
+                            partidaempezada = true;
+                            owner = true;
+                            empezarpartida = true;
+
+                        }
+
+                        if (trozos[1] == "1")
+                        {
+                            MessageBox.Show("Invitación rechazada");
+                        }
+
+                        if (trozos[1] == "3")
+                        {
+                            MessageBox.Show(trozos[2] + " está en otra partida en curso");
+                        }
+                    }
+                    if (trozos[0] == "7")
+                    {
+                        listBox1.Invoke(new DelegadoParaActualizarLista(Escribir_listgrid), new object[] { trozos });
+                    }
+                   
+
+                }
+
+            }
         }
-        private void EscribirLista2(string[] trozos)
+        //Cuando un jugador apuesta un dinero y apuesta a un color se realiza esta función que le dice si ha ganado o a perdido su apuesta.
+       
+
+        //DataGridView con los Usuarios conectados
+        private void Escribir_grid1(string[] trozos)
         {
-            dataGridView2.Rows.Add(trozos[2]);
+            int n = Convert.ToInt32(trozos[1]);
+            dataGridView1.RowCount = n;
+            for (int i = 0; i < n; i++)
+            {
+                trozos[i + 2] = trozos[i + 2].TrimEnd('0');
+                dataGridView1.Rows[i].Cells[0].Value = trozos[i + 2];
+            }
         }
 
+        //DataGridView con los Usuarios Chat
+        private void Escribir_grid2(string[] trozos)
+        {
+            int n = Convert.ToInt32(trozos[1]);
+
+            dataGridView2.RowCount = n;
+            for (int i = 0; i < n; i++)
+            {
+                trozos[i + 2] = trozos[i + 2].TrimEnd('0');
+                dataGridView2.Rows[i].Cells[0].Value = trozos[i + 2];
+            }
+        }
+
+        //DataGridView con laTabla de dinero
+        private void Escribir_grid3(string[] trozos)
+        {
+            int n = trozos.Length;
+            numero_de_jugadores_inicial = numero_de_jugadores;
+            dataGridView3.RowCount = n+1;
+            for (int g = 0; g < n; g++)
+            {
+                trozos[g] = trozos[g].TrimEnd('0');
+                dataGridView3.Rows[g].Cells[0].Value = trozos[g];
+                dataGridView3.Rows[g].Cells[1].Value = "50";
+            }
+        }
+
+        //DataGridView con la Tabla dinero
+        private void Escribir_grid4(string[] trozos)
+        {
+            int n = 0;
+            numero_de_jugadores_inicial = numero_de_jugadores;
+            while(trozos[n] != null)
+            {
+                n++;
+            }
+            dataGridView3.RowCount = n+1;
+            for (int g = 0; g < n; g++)
+            {
+                trozos[g] = trozos[g].TrimEnd('0');
+                dataGridView3.Rows[g].Cells[0].Value = trozos[g];
+                dataGridView3.Rows[g].Cells[1].Value = "50";
+            }
+        }
+
+        //DataGridView con los usuarios conectados
+        private void Escribir_lista(string nombre)
+        {
+            listajugadorespartida = listajugadorespartida + nombre + "/";
+            numero_de_jugadores++;
+        }
+
+        // DataGridView que no molesten cuado clicas el botón
         private void Escribir_listgrid(string[] trozos)
         {
+            if (molestar == true)
             {
-                int f = Convert.ToInt32(trozos[2]);
-                int i = 0;
-                if (dataGridView3.Rows.Count != 0)
-                    dataGridView3.Rows.Clear();
-                while (i < f)
-                {
-                    dataGridView3.Rows.Add(trozos[i + 3]);
-                    i++;
-                }
 
-                
+                string mensaje = Convert.ToString(trozos[1]) + ": " + Convert.ToString(trozos[2]);
+                listBox1.Items.Add(mensaje);
+
             }
 
         }
 
-        private void Escribirchat(string[] trozos)
 
+        private void Button2_Click(object sender, EventArgs e) //Registrarse
         {
-            string mensaje = Convert.ToString(trozos[1]) + ":" + Convert.ToString(trozos[3]);
-        CHAT.Items.Add(mensaje);
-        }
-
- 
-        private void botondesc_Click(object sender, EventArgs e)
-        {
-           // Se terminó el servicio. 
-                // Nos desconectamos
-            this.BackgroundImage = disabled;
-                dataGridView1.Rows.Clear();
-                string mensaje = "0/";
-                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-                this.Text = "Form1";
-                server.Send(msg);
-                atender.Abort();
-                server.Shutdown(SocketShutdown.Both);
-                server.Close();
+            // Envia el nombre y el password del registro con el código 1 y separado por /
+            string mensaje = "1/" + Convert.ToString(nombre_registro.Text) + "/" + Convert.ToString(password_registro.Text);
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
+            nombre_registro.Clear();
+            password_registro.Clear();
 
         }
 
-        private void botonconectar_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e) //Desconectar
+        {
+            // Se terminó el servicio. 
+            // Nos desconectamos
+
+            this.BackColor = Color.Gray;
+            string mensaje = "0/";
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
+            server.Shutdown(SocketShutdown.Both);
+            atender.Abort();
+            server.Close();
+
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)  //conectar servidor
         {
             IPAddress direc = IPAddress.Parse("192.168.56.101");
-            IPEndPoint ipep = new IPEndPoint(direc, 9060);
-
+            IPEndPoint ipep = new IPEndPoint(direc, Convert.ToInt32(textBox6.Text));
+            this.BackColor = Color.Green;
 
             //Creamos el socket 
             server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try
             {
                 server.Connect(ipep);//Intentamos conectar el socket
-                this.BackColor = Color.Green;
+                ThreadStart ts = delegate { atender_mensajes_servidor(); };
+                atender = new Thread(ts);
+                atender.Start();
+                conectado = true;
+                
             }
 
             catch (SocketException)
@@ -111,14 +326,12 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("No he podido conectar con el servidor");
                 return;
             }
-
-            ThreadStart ts = delegate { AtenderServidor(); };
-            atender = new Thread(ts);
-            atender.Start();
+            
         }
 
-        private void Button_login_Click(object sender, EventArgs e)
+        private void Button_login_Click(object sender, EventArgs e) //login
         {
+
             // Envia el nombre y el password del login con el código 2 y separado por /
             nombre_usuario = nombre_login.Text;
             string mensaje = "2/" + Convert.ToString(nombre_login.Text) + "/" + Convert.ToString(password_login.Text);
@@ -127,266 +340,135 @@ namespace WindowsFormsApplication1
             this.Text = nombre_usuario;
             nombre_login.Clear();
             password_login.Clear();
+
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e) //partidas ganadas por un jugador
         {
-            string mensaje = "3/"+textBox2.Text;
+            string mensaje = "3/" + textBox2.Text;
             byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
             server.Send(msg);
             textBox2.Clear();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string mensaje = "4/" + Convert.ToString(textBox1.Text) +"/"+ Convert.ToString(textBox3.Text) ;
-            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-            server.Send(msg);
-            textBox1.Clear();
-            textBox3.Clear();
-        }
-
-        
-
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e) //numero jugadores registrados
         {
             string mensaje = "5/";
             byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
             server.Send(msg);
+
+
+
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) //invitar
         {
-            string nombredelgrid = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            nombredelgrid = nombredelgrid.TrimEnd('\0');
-            if (nombre_usuario == nombredelgrid)
+            if (nombre_usuario == dataGridView1.CurrentRow.Cells[0].Value.ToString())
             {
-                MessageBox.Show("No te puedes invitar a ti mismo");
+                MessageBox.Show("No te puedes invitar a ti mismo. Lo sentimos ^^");
             }
             else
             {
-                string mensaje = "7/" + nombre_usuario + "/" + nombredelgrid;
+                int invitado = e.RowIndex;
+                string mensaje = "6/" + nombre_usuario + "/" + invitado;
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
             }
+
         }
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e) //seleccionar persona para mensaje
         {
-            int rowIndex = dataGridView2.CurrentCell.RowIndex;
-            dataGridView2.Rows.RemoveAt(rowIndex);
+            nombrepersonamensajeada = e.RowIndex;
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e) //enviar mensaje
         {
-            int n = dataGridView2.RowCount;
-            if (n==0)
+            if (nombre_usuario == dataGridView2.CurrentRow.Cells[0].Value.ToString())
             {
-                MessageBox.Show("No has seleccionado a nadie para invitar");
-            }
-            else
-            {
-                int k = 0;
-                while (k<n)
-                {
-                    string nombresdelgrid = dataGridView2.Rows[k].Cells[0].Value.ToString();
-                    nombresdelgrid = nombresdelgrid.TrimEnd('\0');
-                    string mensaje = "8/" + nombresdelgrid + "/" + nombre_usuario + "/" + n; ;
-                    byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-                    server.Send(msg);
-                    k++;
-                    
-                }
-            }
-        }
-        private void AtenderServidor()
-        {
-            while(true)
-            {
-                //Recibimos mensaje del servidor
-                byte[] msg2 = new byte[80];
-                server.Receive(msg2);
-                string [] trozos = Encoding.ASCII.GetString(msg2).Split('/');
-                int codigo = Convert.ToInt32(trozos[0]);
-                switch (codigo)
-                {
-                    case 1:  //Respuesta del registro
-                        
-                        if (Convert.ToInt32(trozos[1]) == 1)
-                        {
-                            MessageBox.Show("Registro ok");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Registro fallido");
-                        }
-                        break;
-
-                    case 2: //Respuesta del login
-
-                        if (Convert.ToInt32(trozos[1]) == 2)
-                        {
-                            MessageBox.Show("login ok");
-                        }
-                        else
-                        {
-                            MessageBox.Show("login fallido");
-                        }
-                        
-                        break;
-
-                    case 3: //Respuesta de cuantas partidas ha ganado un jugador
-
-                        if (Convert.ToInt32(trozos[1]) == 3)
-                        {
-                            MessageBox.Show("el jugador ha ganado:" + Convert.ToInt32(trozos[2]) + "partidas");
-                        }
-                        else
-                        {
-                            MessageBox.Show("peticion fallida");
-                        }
-                        break;
-
-                    case 4: //Respuesta de cuantas partidas han jugado entre dos jugadores
-                       
-                        if (Convert.ToInt32(trozos [1]) == 4)
-                        {
-                            MessageBox.Show("han jugado:" + Convert.ToInt32(trozos[2]) + " partidas");
-                        }
-                        else 
-                        { 
-                            MessageBox.Show("peticion fallida"); 
-                        }
-                        break;
-
-                    case 5: //Respuesta a cuantos jugadores hay registrados
-
-                        if (Convert.ToInt32(trozos[1]) == 5)
-                        {
-                            MessageBox.Show("hay:" + Convert.ToInt32(trozos[2]) + "jugadores registrados");
-                        }
-                        else 
-                        { 
-                            MessageBox.Show("peticion fallida"); 
-                        }
-                        break;
-
-                    case 6: //Enviamos la lista a todos los usuarios conectados
-
-                        if (Convert.ToInt32(trozos[1]) == 6)
-                        {
-                            dataGridView1.Invoke(new DelegadoParaEscribir(EscribirLista), new object[] { trozos });
-                            dataGridView3.Invoke(new DelegadoParaEscribir(Escribir_listgrid), new object[] { trozos });
-                            
-                        }
-                        else
-                        {
-                            MessageBox.Show("peticion fallida");
-                        }
-                        
-                        break;
-
-                    case 7: //Recibimos la invitacion del invitador
-
-                        if (Convert.ToInt32(trozos[1]) == 7)
-                        {
-
-                            dataGridView2.Invoke(new DelegadoParaEscribir(EscribirLista2), new object[] { trozos });
-                                  
-
-                        }
-                        break;
-
-                    case 8: //Recibimos los sockets de los que han aceptado la invitacion y les enviamos que empieza la partida o no
-
-                        trozos[3] = trozos[3].TrimEnd('\0');
-                        DialogResult dialogresult = MessageBox.Show(trozos[2] + " quiere jugar contigo", "Invitación de partida", MessageBoxButtons.OKCancel);
-                        if (dialogresult == DialogResult.OK)
-                        {
-                            string invitado;
-                            invitado = trozos[1];
-                            confirmacion = 1;
-                            int n = Convert.ToInt32(trozos[3]);
-                            string mensaje = "9/" + invitado + "/" + confirmacion + "/" + n;
-                            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-                            server.Send(msg);
-                        }
-                        else
-                        {
-                            string invitado;
-                            invitado = trozos[1];
-                            confirmacion = 0;
-                            string mensaje = "9/" + invitado + "/" + confirmacion;
-                            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-                            server.Send(msg);
-                        }
-
-                        
-                        break;
-                    case 9:
-
-                        MessageBox.Show("Todos los Jugadors han aceptado la partida");
-                        break;
-
-                    case 11:
-                        if (trozos[0] == "11")
-                        {
-                            CHAT.Invoke(new DelegadoParaEscribir(Escribirchat), new object[] { trozos });
-                            
-                        }
-                        else
-                        {
-                            MessageBox.Show("peticion fallida");
-                        }
-
-                        break;
-                }
-
-            }
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            // Envia el nombre y el password del registro con el código 1 y separado por /
-            string mensaje = "1/"+Convert.ToString (nombre_registro.Text)+"/"+Convert.ToString (password_registro.Text);
-            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-            server.Send(msg);
-            nombre_registro.Clear();
-            password_registro.Clear();
-        }
-
-        public Image disabled { get; set; }
-
-
-        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e) //seleccionar persona para enviar el mensaje
-        {
-            if (e.RowIndex == -1)
-            { MessageBox.Show(" error en la seleccion"); }
-            else
-            usuariomensaje = e.RowIndex;
-            
-        }
-        
-        private void buttonchat_Click(object sender, EventArgs e)
-        {
-           
-            if (System.String.Compare(dataGridView3.CurrentRow.Cells[usuariomensaje].Value.ToString(), nombre_usuario)==0)
-            {   
-                
                 MessageBox.Show("No te puedes hablar a ti mismo. Lo sentimos :(");
             }
             else
             {
-                string mensaje = "11/" + nombre_usuario + "/" + dataGridView3.CurrentRow.Cells[usuariomensaje].Value.ToString() + "/" + Convert.ToString(textBoxChat.Text);
-                    byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-                    server.Send(msg);
-                    textBoxChat.Clear();
-                
-        
-        } 
+                string mensaje = "7/" + nombre_usuario + "/" + nombrepersonamensajeada + "/" + Convert.ToString(textBox4.Text);
+                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+                server.Send(msg);
+                textBox4.Clear();
+            }
         }
 
+        private void button7_Click(object sender, EventArgs e) //botón de no molestar cuando lo clicas
+        {
+            if (molestar == false)
+            {
+                this.button7.BackColor = Color.Gray;
+                button7.Text = "No ocupado";
+                molestar = true;
+            }
+            else
+            {
+                this.button7.BackColor = Color.Red;
+                button7.Text = "Ocupado";
+                molestar = false;
+            }
 
-    }
-    }
+        }
+        //Cuando iniciamos la partida hay objetos que desaparecen y otro que se empezaran a ver, igual que ha pasado al principio
+        //del codigo pero en este caso serán los opuestos.
+        private void Pasar_a_Partida()
+        {
+            button1.Visible = false;
+            textbox_IP.Visible = false;
+            groupBox1.Visible = false;
+            groupBox2.Visible = false;
+            button3.Visible = false;
+            dataGridView1.Visible = false;
+            label5.Visible = false;
+            textBox2.Visible = false;
+            button2.Visible = false;
+            label7.Visible = false;
+            button5.Visible = false;
+            label8.Visible = false;
+            button7.Visible = false;
+            dataGridView2.Visible = false;
+            listBox1.Visible = false;
+            label9.Visible = false;
+            textBox4.Visible = false;
+            button6.Visible = false;
+            pictureBox1.Visible = true;
+            dataGridView3.Visible = true;
+            button11.Visible = false;
+            textBox6.Visible = false;
+            label13.Visible = false;
+            label14.Visible = false;
+            label15.Visible = false;
+            label16.Visible = true;
+            button10.Visible = false;
+        }
 
+     
+
+
+        private void DesregistrarseButton_Click(object sender, EventArgs e)//Desregistrarse de la base de datos
+        {
+            //Nos desregistraremos de la base de datos
+            string mensaje = "20/" + textBox1.Text;
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
+            textBox1.Clear();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //Nos desregistraremos de la base de datos
+            string mensaje = "21/";
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
+            textBox1.Clear();
+        }
+
+       
+
+        
+    }
+}
