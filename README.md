@@ -1,3 +1,3 @@
-# Proyecto-Sistemas-Operativos
-
-Version 5 generada por Pablo
+Proyecto-Sistemas-Operativos
+Versión final generada por Jordi 
+Versión final verificada por Pablo

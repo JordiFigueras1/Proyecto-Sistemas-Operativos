@@ -33,6 +33,7 @@
             this.nombre_registro = new System.Windows.Forms.TextBox();
             this.button_registro = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.password_registro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -74,6 +76,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -111,6 +114,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.password_registro);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
@@ -122,6 +126,16 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(5, 29);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(108, 135);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 51;
+            this.pictureBox2.TabStop = false;
             // 
             // password_registro
             // 
@@ -225,7 +239,7 @@
             this.textbox_IP.Name = "textbox_IP";
             this.textbox_IP.Size = new System.Drawing.Size(87, 20);
             this.textbox_IP.TabIndex = 8;
-            this.textbox_IP.Text = "192.168.56.101";
+            this.textbox_IP.Text = "192.168.56.102";
             // 
             // button2
             // 
@@ -376,7 +390,6 @@
             this.button10.TabIndex = 38;
             this.button10.Text = "Empezar partida";
             this.button10.UseVisualStyleBackColor = true;
-            //this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // dataGridView3
             // 
@@ -406,7 +419,17 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(87, 20);
             this.textBox6.TabIndex = 40;
-            this.textBox6.Text = "9070";
+            this.textBox6.Text = "9050";
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(80, 574);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(125, 40);
+            this.button11.TabIndex = 41;
+            this.button11.Text = "Volver a pantalla de inicio";
+            this.button11.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -502,7 +525,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 749);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label6);
@@ -512,6 +535,7 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button7);
@@ -535,9 +559,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Bingo";
+            this.Text = "Black Jack";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -586,6 +611,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -594,6 +620,7 @@
         private System.Windows.Forms.Button DesregistrarseButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label18;
     }
 }

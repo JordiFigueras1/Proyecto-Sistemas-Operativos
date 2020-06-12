@@ -49,7 +49,8 @@ int Desregistrarse(char username_desregistrarse [10])
 		return 1;
 	}
 	
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0); //entorno desarrollo
+	//conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "TG11_BBDD", 0, NULL, 0);
+	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0);
 	if (conn==NULL) 
 	{
 		printf ("Error al inicializar la conexion: %u %s\n", mysql_errno(conn), mysql_error(conn));
@@ -89,7 +90,8 @@ int Registrarse (char username [10], char password [10], int IdentificadorJ)
 		return 1;
 	}
 	
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0); //entorno desarrollo
+	//conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "TG11_BBDD", 0, NULL, 0);
+	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0);
 	if (conn==NULL) 
 	{
 		printf ("Error al inicializar la conexion: %u %s\n", mysql_errno(conn), mysql_error(conn));
@@ -134,7 +136,8 @@ int login (char nombre [15], char password [25])
 		exit (1);
 	}
 	//inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0); //entorno desarrollo
+	//conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "TG11_BBDD",0, NULL, 0);
+	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0);	
 	if (conn==NULL) {
 		printf ("Error al inicializar la conexiï¿ƒï¾³n: %u %s\n", 
 				mysql_errno(conn), mysql_error(conn));
@@ -194,7 +197,8 @@ int consulta_usuario_existente (char nombre [15])
 		return (1);
 	}
 	//inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0); //entorno desarrollo
+	//conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "TG11_BBDD",0, NULL, 0);
+	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0);	
 	if (conn==NULL) {
 		printf ("Error al inicializar la conexiï¿ƒï¾³n: %u %s\n", 
 				mysql_errno(conn), mysql_error(conn));
@@ -256,7 +260,8 @@ int consulta_numero_regitrados()
 		return (-1);
 	}
 	//inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0); //entorno desarrollo
+	//conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "TG11_BBDD",0, NULL, 0);
+	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0);
 	if (conn==NULL) {
 		printf ("Error al inicializar la conexiï¿ƒï¾³n: %u %s\n", 
 				mysql_errno(conn), mysql_error(conn));
@@ -315,7 +320,8 @@ int consulta_partidas_ganadas_jugador (char nombre [15])
 		return (-1);
 	}
 	//inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0); //entorno desarrollo
+	//conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "TG11_BBDD",0, NULL, 0);
+	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0);
 	if (conn==NULL) {
 		printf ("Error al inicializar la conexiï¿ƒï¾³n: %u %s\n", 
 				mysql_errno(conn), mysql_error(conn));
@@ -380,7 +386,8 @@ int consulta_partidas_jugadas_entre_dos (char nombre1 [15], char nombre2 [15])
 		return (-1);
 	}
 	//inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0); //entorno desarrollo
+	//conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "TG11_BBDD",0, NULL, 0);
+	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0);	
 	if (conn==NULL) {
 		printf ("Error al inicializar la conexiï¿ƒï¾³n: %u %s\n", 
 				mysql_errno(conn), mysql_error(conn));
@@ -440,7 +447,8 @@ int consulta_anadir_partida_bbdd()
 		return (-1);
 	}
 	//inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0); //entorno desarrollo
+	//conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "TG11_BBDD",0, NULL, 0);
+	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0);
 	if (conn==NULL) {
 		printf ("Error al inicializar la conexi??n: %u %s\n", 
 				mysql_errno(conn), mysql_error(conn));
@@ -490,7 +498,8 @@ int abrir_base_datos ()
 	
 	//inicializar la conexion, indicando nuestras claves de acceso
 	// al servidor de bases de datos (user,pass)
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", NULL,0, NULL, 0); //entorno desarrollo
+	//conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", NULL, 0, NULL, 0);
+	conn = mysql_real_connect (conn, "localhost","root", "mysql", NULL,0, NULL, 0);
 	if (conn==NULL)
 	{
 		printf ("Error al inicializar la conexion: %u %s\n", 
@@ -501,97 +510,103 @@ int abrir_base_datos ()
 	// ahora vamos a crear la base de datos, que se llamara mydatabase
 	// primero la borramos si es que ya existe (quizas porque hemos
 	// hecho pruebas anteriormente
-	// ahora vamos a crear la base de datos, que se llamara mydatabase
-	// primero la borramos si es que ya existe (quizas porque hemos
-	// hecho pruebas anteriormente
-	mysql_query(conn, "drop database if exists mydatabase;"); 
-	err=mysql_query(conn, "create database mydatabase;");
-	if (err!=0) {
-		printf ("Error al crear la base de datos %u %s\n", 
-				mysql_errno(conn), mysql_error(conn));
-		return (1);
-	}
+	/*	mysql_query(conn, "drop database if exists mydatabase;"); */
+	/*	err=mysql_query(conn, "create database mydatabase;");*/
+	/*	if (err!=0) {*/
+	/*		printf ("Error al crear la base de datos %u %s\n", */
+	/*				mysql_errno(conn), mysql_error(conn));*/
+	/*		return (1);*/
+	//}
 	//indicamos la base de datos con la que queremos trabajar 
 	err=mysql_query(conn, "use mydatabase;");
 	if (err!=0)
 	{
-		printf ("Error al crear la base de datos %u %s\n", 
-				mysql_errno(conn), mysql_error(conn));
-		return (1);
+		err=mysql_query(conn, "create database mydatabase;");
+		if (err!=0) 
+		{
+			printf ("Error al crear la base de datos %u %s\n", 
+					mysql_errno(conn), mysql_error(conn));
+			return (1);
+			
+			
+		}
+		err=mysql_query(conn, "use mydatabase;");
+		
+		// creamos la tabla que define la entidad persona: 
+		// 	un DNI (clave principal), nombre y edad 
+		err=mysql_query(conn,
+						"CREATE TABLE Jugadores (IdentificadorJ integer not null primary key AUTO_INCREMENT, Nombre VARCHAR(15) not null , Password VARCHAR(25) not null)");
+		
+		if (err!=0)
+		{
+			printf ("Error al definir la tabla %u %s\n",
+					mysql_errno(conn), mysql_error(conn));
+			return (1);
+		}
+		err=mysql_query(conn,
+						"CREATE TABLE Partida (IdentificadorP integer primary key AUTO_INCREMENT, Ganador VARCHAR(25))");
+		
+		if (err!=0)
+		{
+			printf ("Error al definir la tabla %u %s\n",
+					mysql_errno(conn), mysql_error(conn));
+			exit (1);
+		}
+		err=mysql_query(conn,
+						"CREATE TABLE Relacion (IdJ integer, IdP integer, FOREIGN KEY (IdJ) REFERENCES Jugadores(IdentificadorJ), FOREIGN KEY (IdP) REFERENCES Partida(IdentificadorP))");
+		
+		if (err!=0)
+		{
+			printf ("Error al definir la tabla %u %s\n",
+					mysql_errno(conn), mysql_error(conn));
+			return (1);
+		}
+		err=mysql_query(conn,"insert into Jugadores (IdentificadorJ, Nombre, Password) values (NULL,'Juan','eetac123');");
+		
+		if (err!=0)
+		{
+			printf ("Error al definir la tabla %u %s\n",
+					mysql_errno(conn), mysql_error(conn));
+			return (1);
+		}
+		
+		err=mysql_query(conn,"insert into Jugadores (IdentificadorJ, Nombre, Password) values (NULL,'Antonio','eetac123');");
+		
+		if (err!=0)
+		{
+			printf ("Error al definir la tabla %u %s\n",
+					mysql_errno(conn), mysql_error(conn));
+			return (1);
+		}		
+		
+		err=mysql_query(conn,"insert into Partida (IdentificadorP, Ganador) values (NULL,'Juan');");
+		
+		if (err!=0)
+		{
+			printf ("Error al definir la tabla %u %s\n",
+					mysql_errno(conn), mysql_error(conn));
+			return (1);
+		}	
+		
+		err=mysql_query(conn,"insert into Relacion (IdJ, IdP) values (1, 1);");
+		
+		if (err!=0)
+		{
+			printf ("Error al definir la tabla %u %s\n",
+					mysql_errno(conn), mysql_error(conn));
+			return (1);
+		}	
+		
+		err=mysql_query(conn,"insert into Relacion (IdJ, IdP) values (2, 1);");
+		
+		if (err!=0)
+		{
+			printf ("Error al definir la tabla %u %s\n",
+					mysql_errno(conn), mysql_error(conn));
+			return (1);
+		}	
 	}
 	
-	// creamos la tabla que define la entidad persona: 
-	// 	un DNI (clave principal), nombre y edad 
-	err=mysql_query(conn,"CREATE TABLE Jugadores (IdentificadorJ integer not null primary key AUTO_INCREMENT, Nombre VARCHAR(15) not null , Password VARCHAR(25) not null)");
-	
-	if (err!=0)
-	{
-		printf ("Error al definir la tabla %u %s\n",
-				mysql_errno(conn), mysql_error(conn));
-		return (1);
-	}
-	err=mysql_query(conn,
-					"CREATE TABLE Partida (IdentificadorP integer not null primary key AUTO_INCREMENT, Fecha DATE , Ganador VARCHAR(25) not null , Duracion integer)");
-	
-	if (err!=0)
-	{
-		printf ("Error al definir la tabla %u %s\n",
-				mysql_errno(conn), mysql_error(conn));
-		exit (1);
-	}
-	err=mysql_query(conn,
-					"CREATE TABLE Relacion (IdJ integer not null, IdP integer not null, FOREIGN KEY (IdJ) REFERENCES Jugadores(IdentificadorJ), FOREIGN KEY (IdP) REFERENCES Partida(IdentificadorP))");
-	
-	if (err!=0)
-	{
-		printf ("Error al definir la tabla %u %s\n",
-				mysql_errno(conn), mysql_error(conn));
-		return (1);
-	}
-	err=mysql_query(conn,"insert into Jugadores (IdentificadorJ, Nombre, Password) values (NULL,'Dani','eetac123');");
-	
-	if (err!=0)
-	{
-		printf ("Error al definir la tabla %u %s\n",
-				mysql_errno(conn), mysql_error(conn));
-		return (1);
-	}
-	
-	err=mysql_query(conn,"insert into Jugadores (IdentificadorJ, Nombre, Password) values (NULL,'David','eetac123');");
-	
-	if (err!=0)
-	{
-		printf ("Error al definir la tabla %u %s\n",
-				mysql_errno(conn), mysql_error(conn));
-		return (1);
-	}		
-	
-	err=mysql_query(conn,"insert into Partida (IdentificadorP, Fecha, Ganador, Duracion) values (NULL, 20180314,'Dani', 4);");
-	
-	if (err!=0)
-	{
-		printf ("Error al definir la tabla %u %s\n",
-				mysql_errno(conn), mysql_error(conn));
-		return (1);
-	}	
-	
-	err=mysql_query(conn,"insert into Relacion (IdJ, IdP) values (1, 1);");
-	
-	if (err!=0)
-	{
-		printf ("Error al definir la tabla %u %s\n",
-				mysql_errno(conn), mysql_error(conn));
-		return (1);
-	}	
-	
-	err=mysql_query(conn,"insert into Relacion (IdJ, IdP) values (2, 1);");
-	
-	if (err!=0)
-	{
-		printf ("Error al definir la tabla %u %s\n",
-				mysql_errno(conn), mysql_error(conn));
-		return (1);
-	}	
 	
 	
 	// ahora tenemos la base de datos lista en el servidor de MySQL
@@ -616,7 +631,8 @@ int inserta_ganador_partida(int id, char ganador[25])
 		return (-1);
 	}
 	//inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0); //entorno desarrollo
+	//conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "TG11_BBDD",0, NULL, 0);
+	conn = mysql_real_connect (conn, "localhost","root", "mysql", "mydatabase",0, NULL, 0);
 	if (conn==NULL) {
 		printf ("Error al inicializar la conexi??n: %u %s\n", 
 				mysql_errno(conn), mysql_error(conn));
@@ -1023,6 +1039,11 @@ void *atender_cliente (void *socket)
 			write (sock_conn,buff2, strlen(buff2));
 		}
 		
+		if(codigo == 12) //Ganador
+		{
+			int i=inserta_ganador_partida(*lista_mensajes.mensajes[0].trozo,lista_mensajes.mensajes[1].trozo);
+			
+		}
 		
 	}
 }

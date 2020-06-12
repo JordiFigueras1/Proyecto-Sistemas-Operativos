@@ -20,6 +20,11 @@ namespace WindowsFormsApplication1
         string nombre_usuario;
         int nombrepersonamensajeada;
         string listajugadorespartida;
+        int dineroapostado;
+        string colorapostado;
+        bool jugadarealizada = false;
+        bool partidaempezada = false;
+        bool owner = false;
         string[] trozos3 = new string[10];
         string[] lista_de_jugadas = new string[10];
         int numero_de_jugadores =0;
@@ -37,12 +42,10 @@ namespace WindowsFormsApplication1
             //Decidimos lo que queremos que se vea al iniciar el programa.
             InitializeComponent();
             pictureBox1.Visible = false;
-           
             dataGridView3.Visible = false;
-           
+            button11.Visible = false;
             label16.Visible = false;
-            
-            textBox6.Text = "9050";
+            textBox6.Text = "50081";
             textbox_IP.Text = "147.83.117.22";
 
         }
@@ -166,7 +169,10 @@ namespace WindowsFormsApplication1
                         {
                             MessageBox.Show("Invitación aceptada por " + trozos[2]);
                             Escribir_lista(trozos[2]);
-                                  
+                            partidaempezada = true;
+                            owner = true;
+                            empezarpartida = true;
+
                         }
 
                         if (trozos[1] == "1")
@@ -183,38 +189,6 @@ namespace WindowsFormsApplication1
                     {
                         listBox1.Invoke(new DelegadoParaActualizarLista(Escribir_listgrid), new object[] { trozos });
                     }
-                    if (trozos[0] == "8")
-                    //Va a empezar la partida
-                    {
-                        string[] trozos2 = new string[20];
-                        for (int i = 0; trozos[i] != null; i++)
-                        {
-                            trozos2[i] = trozos[i + 1];
-                        }
-                        trozos2[trozos2.Length + 1] = nombre_usuario;
-                        //Escribir_grid3(trozos2);
-                       
-
-                    }
-                    if (trozos[0] == "9")
-                    {
-                        if (trozos[3] != nombre_usuario)
-                        {
-                            int i;
-                            i = 0;
-                            while (i < 10)
-                            {
-                                if (lista_de_jugadas[i] == null)
-                                {
-                                    lista_de_jugadas[i] = trozos[3] + "/" + trozos[2] + "/" + trozos[1];
-                                    break;
-                                }
-                                i++;
-                            }
-                        }
-
-                    }
-                   
                    
 
                 }
@@ -222,7 +196,7 @@ namespace WindowsFormsApplication1
             }
         }
         //Cuando un jugador apuesta un dinero y apuesta a un color se realiza esta función que le dice si ha ganado o a perdido su apuesta.
-     
+       
 
         //DataGridView con los Usuarios conectados
         private void Escribir_grid1(string[] trozos)
@@ -249,9 +223,39 @@ namespace WindowsFormsApplication1
             }
         }
 
-       
+        //DataGridView con laTabla de dinero
+        private void Escribir_grid3(string[] trozos)
+        {
+            int n = trozos.Length;
+            numero_de_jugadores_inicial = numero_de_jugadores;
+            dataGridView3.RowCount = n+1;
+            for (int g = 0; g < n; g++)
+            {
+                trozos[g] = trozos[g].TrimEnd('0');
+                dataGridView3.Rows[g].Cells[0].Value = trozos[g];
+                dataGridView3.Rows[g].Cells[1].Value = "50";
+            }
+        }
 
-        //DataGridView con los usuarios conectados                                                                  ///////////////
+        //DataGridView con la Tabla dinero
+        private void Escribir_grid4(string[] trozos)
+        {
+            int n = 0;
+            numero_de_jugadores_inicial = numero_de_jugadores;
+            while(trozos[n] != null)
+            {
+                n++;
+            }
+            dataGridView3.RowCount = n+1;
+            for (int g = 0; g < n; g++)
+            {
+                trozos[g] = trozos[g].TrimEnd('0');
+                dataGridView3.Rows[g].Cells[0].Value = trozos[g];
+                dataGridView3.Rows[g].Cells[1].Value = "50";
+            }
+        }
+
+        //DataGridView con los usuarios conectados
         private void Escribir_lista(string nombre)
         {
             listajugadorespartida = listajugadorespartida + nombre + "/";
@@ -302,7 +306,7 @@ namespace WindowsFormsApplication1
         {
             IPAddress direc = IPAddress.Parse("192.168.56.101");
             IPEndPoint ipep = new IPEndPoint(direc, Convert.ToInt32(textBox6.Text));
-
+            this.BackColor = Color.Green;
 
             //Creamos el socket 
             server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -311,7 +315,6 @@ namespace WindowsFormsApplication1
                 server.Connect(ipep);//Intentamos conectar el socket
                 ThreadStart ts = delegate { atender_mensajes_servidor(); };
                 atender = new Thread(ts);
-                this.BackColor = Color.Green;
                 atender.Start();
                 conectado = true;
                 
@@ -410,9 +413,41 @@ namespace WindowsFormsApplication1
             }
 
         }
-      
+        //Cuando iniciamos la partida hay objetos que desaparecen y otro que se empezaran a ver, igual que ha pasado al principio
+        //del codigo pero en este caso serán los opuestos.
+        private void Pasar_a_Partida()
+        {
+            button1.Visible = false;
+            textbox_IP.Visible = false;
+            groupBox1.Visible = false;
+            groupBox2.Visible = false;
+            button3.Visible = false;
+            dataGridView1.Visible = false;
+            label5.Visible = false;
+            textBox2.Visible = false;
+            button2.Visible = false;
+            label7.Visible = false;
+            button5.Visible = false;
+            label8.Visible = false;
+            button7.Visible = false;
+            dataGridView2.Visible = false;
+            listBox1.Visible = false;
+            label9.Visible = false;
+            textBox4.Visible = false;
+            button6.Visible = false;
+            pictureBox1.Visible = true;
+            dataGridView3.Visible = true;
+            button11.Visible = false;
+            textBox6.Visible = false;
+            label13.Visible = false;
+            label14.Visible = false;
+            label15.Visible = false;
+            label16.Visible = true;
+            button10.Visible = false;
+        }
 
-       
+     
+
 
         private void DesregistrarseButton_Click(object sender, EventArgs e)//Desregistrarse de la base de datos
         {
